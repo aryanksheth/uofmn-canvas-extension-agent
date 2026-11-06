@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{font:14px system-ui,sans-serif;width:365px;margin:0;padding:16px;color:#17202a;background:#fff}h2{margin:0 0 8px}p{color:#52606d}label{display:block;margin:10px 0 4px;font-weight:600}input,select,textarea,button{box-sizing:border-box;width:100%;padding:9px;border:1px solid #c8d0d8;border-radius:7px;font:inherit}textarea{height:70px;resize:vertical}button{background:#175cd3;color:white;border:0;margin-top:12px;cursor:pointer}button:disabled{opacity:.6}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:300px;overflow:auto;background:#f3f6fa;padding:10px;border-radius:7px}small{color:#64748b}
+</style></head><body>
+<h2>Canvas Copilot</h2><p>Only the currently open Canvas page is shared when you press Analyze.</p>
+<label for="token">Local pairing secret</label><input id="token" type="password" autocomplete="off" placeholder="Paste CANVAS_BRIDGE_TOKEN">
+<label for="task">Task</label><select id="task"><option value="summary">Summarize page</option><option value="explain">Explain instructions</option><option value="plan">Create study plan</option><option value="question">Ask a question</option></select>
+<label for="question">Optional question</label><textarea id="question" placeholder="What do I need to do for this assignment?"></textarea>
+<button id="analyze">Analyze current page</button><p id="status" role="status"></p><pre id="result" hidden></pre>
+<small>No automatic scraping. Avoid sharing grades, personal data, or private student records.</small>
+<script src="popup.js"></script></body></html>
